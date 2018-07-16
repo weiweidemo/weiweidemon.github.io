@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="content/bootstrap.min.css">
+	<link rel="stylesheet" href="content/w3.css">
+	<link rel="stylesheet" href="content/fe-index.css">
+	<link rel="stylesheet" href="content/main.css">
+	<link rel="stylesheet" href="content/main-introduction.css">
+	<link rel="stylesheet" href="content/main-news.css">
+	<link rel="stylesheet" href="content/main-proposal.css">
+	<link rel="stylesheet" href="content/main-investment.css">
+	<link rel="stylesheet" href="content/dialog.css">
+	<link rel="stylesheet" href="content/load.css">
+	<link rel="stylesheet" href="content/load-fe-control.css">
+
+	<script src="scripts/jquery-3.3.1.js"></script>
+	<script src="scripts/jquery-3.3.1.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/ckeditor/ckeditor.js"></script>
+	<script src="scripts/scroll-fe-control.js"></script>
+
+	
+</head>
+<body>
+	<div id="load-all" class="load-all">
+		<div class="load-main">
+			<div class="load8">
+				<div class="load8-container container1">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+				<div class="load8-container container2">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+				<div class="load8-container container3">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div id="top-menu" class="top-menu">
+		<!-- Image and text -->
+		<nav class="navbar navbar-expand-sm navbar-dark">
+			<a class="navbar-brand" onclick="GoPage()" href="#toppage">
+				<img src="image/logo.svg" width="36" height="36" class="d-inline-block align-top" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<img src="image/menu.svg" width="36" height="36" class="d-inline-block align-top" alt="">
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" onclick="GoPage()" href="#introduction"><font color="white">本站介紹</font></a>
+					<a class="nav-item nav-link" onclick="GoPage()" href="#news"><font color="white">消息</font></a>
+					<a class="nav-item nav-link" onclick="GoPage()" href="#proposal"><font color="white">提案</font></a>
+					<a class="nav-item nav-link" onclick="GoPage()" href="#investment"><font color="white">探索</font></a>
+				</div>
+			</div>
+			<div></div>
+		</nav>
+	</div>
+	<div class="all">
+		<div id="toppage" class="header"></div>
+		<div class="main">
+			<div class="main-promotional-map">
+				<img src="image/promotional map.svg" alt="">
+			</div>
+			<div id="introduction" class="main-interval"></div>
+			<div class="main-function-page main-introduction">
+				<div class="main-function-page main-introduction-button">
+					<div class="main-introduction-button-item">
+			        	<button onclick="playExplanationDialog(1)" class="w3-button">何謂CF</button>
+			        </div>
+			        <div class="main-introduction-button-interval"></div>
+			        <div class="main-introduction-button-item">
+			        	<button onclick="playExplanationDialog(2)" class="w3-button">如何募資</button>
+			        </div>
+			        <div class="main-introduction-button-interval"></div>
+			        <div class="main-introduction-button-item">
+			        	<button onclick="playExplanationDialog(3)" class="w3-button">如何投資</button>
+			        </div>
+				</div>
+				<div id="dialog-bg" class="main-introduction-dialog-bg"></div>
+				<div id="dialog-explanation-1" class="main-function-page main-introduction-explanation main-introduction-dialog">
+					<p class="main-introduction-dialog-header">
+						<img src="image/cancel.svg" width="24" height="24" onclick="displayExplanationDialog(1)" class="d-inline-block align-top" alt="">
+					</p>
+					<div>
+						<div>
+							<img src="image/crowd-funding.svg" alt="" style="max-width: 360px;max-height: 360px;">
+						</div>
+					</div>
+					<div class="main-introduction-explanation-padding-top">
+						<p style="font-size: 24px;">
+							CF名稱為Crowd和funding,兩個英文字幕合併成的名稱,本站就如同Crowdfunding的意思,專為您的想法募集您所需要的資金,只要將您的計畫容,於本站提出,就能讓更多的投資者,看見您的計畫
+						</p>
+					</div>
+				</div>
+				<div class="main-function-page main-introduction-explanation">
+					<div>
+						<div>
+							<img src="image/crowd-funding.svg" alt="">
+						</div>
+					</div>
+					<div class="main-introduction-explanation-padding-top">
+						<p>
+							CF名稱為Crowd和funding,兩個英文字幕合併成的名稱,本站就如同Crowdfunding的意思,專為您的想法募集您所需要的資金,只要將您的計畫容,於本站提出,就能讓更多的投資者,看見您的計畫
+						</p>
+					</div>
+				</div>
+				<div id="dialog-explanation-2" class="main-function-page main-introduction-proposal-dialog main-introduction-dialog">
+					<p class="main-introduction-dialog-header">
+						<img src="image/cancel.svg" width="24" height="24" onclick="displayExplanationDialog(2)" class="d-inline-block align-top" alt="">
+					</p>
+					<div>
+						<center>
+							<img class="main-introduction-proposal-dialog-img" width="410" src="image/proposal.png" alt="">
+						</center>
+					</div>
+				</div>
+				<div class="main-function-page main-introduction-proposal">
+					<div>
+						<center>
+							<img class="main-introduction-proposal-img align-middle" src="image/proposal.png" alt="">
+						</center>
+					</div>
+				</div>
+				<div id="dialog-explanation-3" class="main-function-page main-introduction-investment-dialog main-introduction-dialog">
+					<p class="main-introduction-dialog-header">
+						<img src="image/cancel.svg" width="24" height="24" onclick="displayExplanationDialog(3)" class="d-inline-block align-top" alt="">
+					</p>
+					<div>
+						<center>
+							<img class="main-introduction-investment-dialog-img" width="758" src="image/investment.png" alt="">
+						</center>
+					</div>
+				</div>
+				<div class="main-function-page main-introduction-investment">
+					<div>
+						<center>
+							<img class="main-introduction-investment-img align-middle" src="image/investment.png" alt="">
+						</center>
+					</div>
+				</div>
+			</div>
+			<div id="news" class="main-interval"></div>
+			<div class="main-function-page-half main-news">
+				<div>
+					<p onclick="playDialog()">2018/6/25新新聞準備中</p>
+					<p onclick="playDialog()">2018/6/25新新聞準備中</p>
+				</div>
+			</div>
+			<div id="proposal" class="main-interval"></div>
+			<div class="main-function-page-half main-proposal">
+				<div>
+					<p>為您的想法,來此募資</p>
+				</div>
+				<div class="main-proposal-button">
+					<div class="main-proposal-button-item">
+						<center>
+							<button class="w3-button" onclick="playDialog2()">提案</button>
+						</center>
+					</div>
+				</div>
+			</div>
+			<div id="investment" class="main-interval"></div>
+			<div class="main-function-page main-investment">
+				<div class="w3-display-container">
+					<div>
+						<div class="mySlides main-investment-slide-img" style="background-image: url('image/slide-bg-01.jpg');">
+							<div class="main-investment-slide-img-content-top">
+								<div class="main-investment-slide-img-title">
+									標題一二三
+								</div>
+								<div class="main-investment-slide-img-introduction">
+									標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三
+								</div>
+							</div>
+							<div class="main-investment-slide-img-content-midle">
+								<div class="main-investment-slide-img-button">
+									<button class="w3-button" onclick="playDialog3()">瀏覽</button>
+								</div>
+							</div>
+							<div class="main-investment-slide-img-content-bottom">
+								<img class="img-float-left" src="image/Previous page.png" alt="">
+								<img class="img-float-right" src="image/next page.png" alt="">
+							</div>
+						</div>
+						<div class="mySlides main-investment-slide-img" style="background-image: url('image/slide-bg-02.webp');">
+							<div class="main-investment-slide-img-content-top">
+								<div class="main-investment-slide-img-title">
+									標題A二三
+								</div>
+								<div class="main-investment-slide-img-introduction">
+									標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三
+								</div>
+							</div>
+							<div class="main-investment-slide-img-content-midle">
+								<div class="main-investment-slide-img-button">
+									<button class="w3-button">瀏覽</button>
+								</div>
+							</div>
+							<div class="main-investment-slide-img-content-bottom">
+								<img class="img-float-left" src="image/Previous page.png" alt="">
+								<img class="img-float-right" src="image/next page.png" alt="">
+							</div>
+						</div>
+						<div class="mySlides main-investment-slide-img" style="background-image: url('image/slide-bg-03.jpg');">
+							<div class="main-investment-slide-img-content-top">
+								<div class="main-investment-slide-img-title">
+									標題B二三
+								</div>
+								<div class="main-investment-slide-img-introduction">
+									標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三標題一二三
+								</div>
+							</div>
+							<div class="main-investment-slide-img-content-midle">
+								<div class="main-investment-slide-img-button">
+									<button class="w3-button">瀏覽</button>
+								</div>
+							</div>
+							<div class="main-investment-slide-img-content-bottom">
+								<img width="24" class="img-float-left" src="image/Previous page.png" alt="">
+								<img width="24" class="img-float-right" src="image/next page.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="w3-display-left main-investment-slide-list">
+						<div class="main-investment-slide-list-item" onclick="currentDiv(1)" onmouseover="currentDiv(1)">標題一二三...</div>
+						<div class="main-investment-slide-list-item" onclick="currentDiv(2)" onmouseover="currentDiv(2)">標題一二三...</div>
+						<div class="main-investment-slide-list-item" onclick="currentDiv(3)" onmouseover="currentDiv(3)">標題一二三...</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-function-page-onethird main-investment-bottom">
+				<div class="main-investment-bottom-list">
+					<div class="main-investment-bottom-list-item text-align-left" onclick="currentDiv(1)" onmouseover="currentDiv(1)">標題一...
+					</div>
+					<div class="main-investment-bottom-list-item text-align-center" onclick="currentDiv(2)" onmouseover="currentDiv(2)">標題一...
+					</div>
+					<div class="main-investment-bottom-list-item text-align-right" onclick="currentDiv(3)" onmouseover="currentDiv(3)">標題一...
+					</div>
+				</div>
+				<div class="main-investment-bottom-img">
+					<img width="24" class="img-float-left" src="image/Previous page.png" alt="">
+					<img width="24" class="img-float-right" src="image/next page.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div id="dialog-cover" class="dialog-cover"></div>
+		<div id="dialog" class="dialog">
+			<div class="dialog-header">
+				<img src="image/cancel.svg" width="48" height="48" onclick="displayDialog()" class="d-inline-block align-top" alt="">
+			</div>
+			<iframe src="dialog.html" frameborder="0" id="dialog-main" class="dialog-main">
+
+			</iframe>
+		</div>
+		<div id="dialog-2" class="dialog">
+			<div class="dialog-header">
+				<img src="image/cancel.svg" width="48" height="48" onclick="displayDialog()" class="d-inline-block align-top" alt="">
+			</div>
+			<iframe src="dialog-2.html" frameborder="0" id="dialog-main2" class="dialog-main">
+
+			</iframe>
+		</div>
+		<div id="dialog-3" class="dialog">
+			<div class="dialog-header">
+				<img src="image/cancel.svg" width="48" height="48" onclick="displayDialog()" class="d-inline-block align-top" alt="">
+			</div>
+			<iframe src="dialog-3.html" frameborder="0" id="dialog-main3" class="dialog-main">
+
+			</iframe>
+		</div>
+		<div id="dialog-4" class="dialog">
+			<div class="dialog-header">
+				<img src="image/cancel.svg" width="48" height="48" onclick="displayDialog()" class="d-inline-block align-top" alt="">
+			</div>
+			<iframe src="dialog-4.html" frameborder="0" id="dialog-main4" class="dialog-main">
+
+			</iframe>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+
+<script>
+	function WebpIsSupported(callback) {
+        // If the browser doesn't has the method createImageBitmap, you can't display webp format
+        if (!window.createImageBitmap) {
+            callback(false);
+            return;
+        }
+
+        // Base64 representation of a white point image
+        var webpdata = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
+
+        // Retrieve the Image in Blob Format
+        fetch(webpdata).then(function (response) {
+            return response.blob();
+        }).then(function (blob) {
+            // If the createImageBitmap method succeeds, return true, otherwise false
+            createImageBitmap(blob).then(function () {
+                callback(true);
+            }, function () {
+                callback(false);
+            });
+        });
+    }
+
+	WebpIsSupported(function (isSupported) {
+        if (isSupported) {
+            //alert('瀏覽器支援webp');
+        } else {
+        	//alert('瀏覽器不支援webp');
+         }
+    });
+
+	function playExplanationDialog(value) {
+		var isforwork=true;
+		for(var i=1;(i<4 & isforwork);i++){
+			if(document.getElementById("dialog-explanation-"+i).style.display=="block"){
+				isforwork=false;
+				document.getElementById("dialog-bg").classList.remove("main-introduction-dialog-bg-show");
+				document.getElementById("dialog-explanation-1").classList.remove('main-introduction-dialog-animation-show');
+				document.getElementById("dialog-explanation-1").classList.add('main-introduction-dialog-animation-notshow');
+				document.getElementById("dialog-explanation-2").classList.remove('main-introduction-dialog-animation-show');
+				document.getElementById("dialog-explanation-2").classList.add('main-introduction-dialog-animation-notshow');
+				document.getElementById("dialog-explanation-3").classList.remove('main-introduction-dialog-animation-show');
+				document.getElementById("dialog-explanation-3").classList.add('main-introduction-dialog-animation-notshow');
+				setTimeout(function () {
+					document.getElementById("dialog-explanation-1").style.display = "none";
+					document.getElementById("dialog-explanation-1").classList.remove('main-introduction-dialog-animation-notshow');
+					document.getElementById("dialog-explanation-2").style.display = "none";
+					document.getElementById("dialog-explanation-2").classList.remove('main-introduction-dialog-animation-notshow');
+					document.getElementById("dialog-explanation-3").style.display = "none";
+					document.getElementById("dialog-explanation-3").classList.remove('main-introduction-dialog-animation-notshow');
+
+					document.getElementById("dialog-bg").classList.add("main-introduction-dialog-bg-show");
+				    document.getElementById("dialog-explanation-"+value).style.display = "block";
+					document.getElementById("dialog-explanation-"+value).classList.add('main-introduction-dialog-animation-show');
+				    setTimeout(function () {
+						document.getElementById("top-menu").style.display = "none";
+					},500);
+				    $('#dialog-main').scrollTop(0);
+				},500);
+			}
+		}
+
+		if(isforwork){
+			document.getElementById("dialog-bg").classList.add("main-introduction-dialog-bg-show");
+		    document.getElementById("dialog-explanation-"+value).style.display = "block";
+			document.getElementById("dialog-explanation-"+value).classList.add('main-introduction-dialog-animation-show');
+		    setTimeout(function () {
+				document.getElementById("top-menu").style.display = "none";
+			},500);
+		    $('#dialog-main').scrollTop(0);
+		}
+	}
+
+	function displayExplanationDialog(value) {
+	    document.getElementById("dialog-bg").classList.remove("main-introduction-dialog-bg-show");
+		document.getElementById("dialog-explanation-"+value).classList.remove('main-introduction-dialog-animation-show');
+		document.getElementById("dialog-explanation-"+value).classList.add('main-introduction-dialog-animation-notshow');
+	    document.getElementById("top-menu").style.display = "block";
+		setTimeout(function () {
+			document.getElementById("dialog-explanation-"+value).style.display = "none";
+			document.getElementById("dialog-explanation-"+value).classList.remove('main-introduction-dialog-animation-notshow');
+		},500);
+	}
+	function plusDivs(n) {
+		showDivs(slideIndex += n);
+	}
+
+	function currentDiv(n) {
+		showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = x.length}
+		for (i = 0; i < x.length; i++) {
+			x[i].classList.add('main-investment-slide-img-notshow');
+		}
+		
+		setTimeout(function () {
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove('main-investment-slide-img-notshow');
+				x[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+			}
+			x[slideIndex-1].style.display = "block";
+			x[slideIndex-1].classList.add('main-investment-slide-img-show');
+			dots[slideIndex-1].className += " w3-opacity-off";
+		},1000);
+	}
+	var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function playDialog() {
+		playLoad();
+		setTimeout(function () {
+			document.getElementById("dialog").style.display = "block";
+			document.getElementById("dialog-cover").style.display = "block";
+			document.getElementById("top-menu").style.display = "none";
+			$('#dialog-main').scrollTop(0);
+			
+			setTimeout(function () {displayLoad();}, 1000);
+		}, 1000);
+	    
+	}
+    function playDialog2() {
+		playLoad();
+		setTimeout(function () {
+			document.getElementById("dialog-2").style.display = "block";
+			document.getElementById("dialog-cover").style.display = "block";
+			document.getElementById("top-menu").style.display = "none";
+			$('#dialog-main2').scrollTop(0);
+			setTimeout(function () {displayLoad();}, 1000);
+		}, 1000);
+	}
+	function playDialog3() {
+		playLoad();
+		setTimeout(function () {
+			document.getElementById("dialog-3").style.display = "block";
+			document.getElementById("dialog-cover").style.display = "block";
+			document.getElementById("top-menu").style.display = "none";
+			$('#dialog-main3').scrollTop(0);
+			setTimeout(function () {displayLoad();}, 1000);
+		}, 1000);
+	}
+	function playDialog4() {
+		playLoad();
+		setTimeout(function () {
+			document.getElementById("dialog-4").style.display = "block";
+			document.getElementById("dialog-cover").style.display = "block";
+			document.getElementById("top-menu").style.display = "none";
+			$('#dialog-main4').scrollTop(0);
+			setTimeout(function () {displayLoad();}, 1000);
+		}, 1000);
+	}
+	function displayDialog() {
+		playLoad();
+		setTimeout(function () {
+			document.getElementById("dialog").style.display = "none";
+			document.getElementById("dialog-2").style.display = "none";
+			document.getElementById("dialog-3").style.display = "none";
+			document.getElementById("dialog-4").style.display = "none";
+			document.getElementById("dialog-cover").style.display = "none";
+			document.getElementById("top-menu").style.display = "block";
+			setTimeout(function () {displayLoad();}, 1000);
+		}, 1000);
+	}
+
+	function playLoad() {
+		var element = document.getElementById("load-all");
+		element.classList.add("load-all-animation-start");
+	}
+	function displayLoad() {
+		var element = document.getElementById("load-all");
+		element.classList.remove("load-all-animation-start");
+		element.classList.add("load-all-animation-end");
+		setTimeout(function () {
+			element.classList.remove("load-all-animation-start");
+			element.classList.remove("load-all-animation-end");
+		}, 1000);
+	}
+	function displayLoadFirst() {
+		var element = document.getElementById("load-all");
+		element.classList.add("load-all-animation-end-first");
+		setTimeout(function () {
+			element.classList.remove("load-all-animation-end-first");
+		}, 2000);
+	}
+
+	displayLoadFirst();
+
+	function GoPage() {
+		$("#navbarNavAltMarkup").removeClass('show');
+    }
+
+    function resetExplanationDialog(y){
+    	if(screen.width < 800){
+    		if(document.getElementById("dialog-explanation-1").style.display=="block" | document.getElementById("dialog-explanation-2").style.display=="block" | document.getElementById("dialog-explanation-3").style.display=="block"){
+    			displayExplanationDialog(1);
+	    		displayExplanationDialog(2);
+	    		displayExplanationDialog(3);
+    		}
+    	}
+
+    	setTimeout(function () {
+    		resetExplanationDialog();
+    	}, 500);
+    }
+
+    resetExplanationDialog();
+	
+	</script>
+
+</html>
